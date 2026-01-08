@@ -10,34 +10,28 @@ while True:
     choice = int(input("\nEnter your choice: ") )
 
     if choice == 1:
-        name = input("Enter Student Name: ")
-
-        grade = input("Enter Student Grade: ")
+        name = input("\nEnter student name: ")
+        grade = input("Enter student grade: ")
         students[name] = grade
-        print("Student added successfully.")
-
+        print(f"\nStudent {name} with grade {grade} added.")    
+    
     elif choice == 2:
-        name = input("Enter Student Name to Update : ")
+        name = input("\nEnter student name to update: ")
         if name in students:
-            grade = input("Enter New Grade: ")
+            grade = input("Enter new grade: ")
             students[name] = grade
-            print("Student grade updated to .")
+            print(f"\nStudent {name}'s grade updated to {grade}.")
         else:
-            print("Student not found.")
+            print(f"\nStudent {name} not found.")
 
     elif choice == 3:
-        if students:
-            print("\nStudent Grades:")
-            for name, grade in students.items():
-                print(name, ":" ,grade)
-        else:
-            print("No student records found.")
+        print("\nStudent Grades:")
+        for name, grade in students.items():
+            print(f"{name}: {grade}")
 
     elif choice == 4:
-        print("Exiting the program.")
+        print("\nExiting the program.")
         break
     else:
-        print("Invalid choice. Please try again.")
-    
-
-         
+        print("\nInvalid choice. Please try again.")
+# Student Grade Checker program
